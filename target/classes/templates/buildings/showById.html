@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Building-editing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>Building changing page</h2>
+    <p style="color:red">
+        <a th:text="${errorMessage}"></a>
+    </p>
+    <a class="btn btn-sm btn-secondary" href="/buildings">Back to table</a>
+    <br/>
+    <br/>
+    <form th:method="PUT" th:action="@{/buildings/{id}(id=${building.id})}" th:object="${building}">
+        <label>Change name: </label>
+        <input class="form-control form-control-sm" type="text" th:field="*{buildingName}"/>
+        <br/>
+        <input class="btn btn-sm btn-success" type="submit" value="Update!">
+    </form>
+    <br/>
+    <form th:method="DELETE"
+          th:action="@{/buildings/{id}(id=${building.id})}">
+        <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+    </form>
+</div>
+</body>
+</html>

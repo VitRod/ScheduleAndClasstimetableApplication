@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Lesson-creation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>New lesson creation page</h2>
+    <p style="color:red">
+        <a th:text="${errorMessage}"></a>
+    </p>
+    <a class="btn btn-sm btn-secondary" href="/lessons">Back to table</a>
+    <br/>
+    <br/>
+    <div class="input-group">
+        <form th:method="POST" th:action="@{/lessons}" th:object="${lesson}">
+            <label>Enter date:</label>
+            <input class="form-control form-control-sm" type="date" th:field="*{date}"/>
+
+            <label>Enter time of beginning:</label>
+            <input class="form-control form-control-sm" type="time" th:field="*{startTime}"/>
+
+            <label>Enter time of end:</label>
+            <input class="form-control form-control-sm" type="time" th:field="*{endTime}"/>
+
+            <label>Select classroom:</label>
+            <select class="form-control form-control-sm" th:field="*{classroomId}">
+                <option th:each="classroom:${classrooms}"
+                        th:value="${classroom.id}"
+                        th:text="${classroom.roomName}">
+                </option>
+            </select>
+
+            <label>Select course:</label>
+            <select class="form-control form-control-sm" th:field="*{courseId}">
+                <option th:each="course:${courses}"
+                        th:value="${course.id}"
+                        th:text="${course.courseName}">
+                </option>
+            </select>
+
+            <label>Select teacher:</label>
+            <select class="form-control form-control-sm" th:field="*{teacherId}">
+                <option th:each="teacher:${teachers}"
+                        th:value="${teacher.id}"
+                        th:text="${teacher.firstName} + ' ' + ${teacher.lastName}">
+                </option>
+            </select>
+            <br/>
+            <input class="btn btn-sm btn-success" type="submit" value="Create!">
+        </form>
+    </div>
+</div>
+</body>
+</html>

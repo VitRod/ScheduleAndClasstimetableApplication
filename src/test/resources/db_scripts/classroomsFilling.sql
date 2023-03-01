@@ -1,0 +1,16 @@
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('A-1', 'Class', 30, 1);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('A-2', 'Class', 30, 1);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('A-3', 'Class', 30, 1);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('A-4', 'Lecture', 50, 1);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('A-5', 'Laboratory', 10, 1);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('B-1', 'Class', 30, 2);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('B-2', 'Class', 30, 2);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('B-3', 'Class', 30, 2);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('B-4', 'Lecture', 50, 2);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('B-5', 'Laboratory', 10, 2);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('C-1', 'Class', 30, 3);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('C-2', 'Class', 30, 3);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('C-3', 'Class', 30, 3);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('C-4', 'Lecture', 50, 3);
+INSERT INTO classrooms (room_name, room_type, room_capacity, building_id) VALUES ('C-5', 'Laboratory', 10, 3);
+COMMIT;

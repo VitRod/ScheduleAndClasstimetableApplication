@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>Welcome!</h2>
+    <br/>
+    <h4>
+        This is an application for students and teachers of the fictional university model.</br>
+        The main purpose of the application is giving an opportunity to get his lesson schedule
+        for each student, teacher or other staff.</br>
+        The current user's role is an administrator of the application.</br>
+        Also the application gives an idea of the university structure: university campus, taught courses
+        and university personalities.
+    </h4>
+    <br/>
+    <h3>Here you can find your schedule out:</h3>
+    <a class="btn btn-lg btn-success" href="/schedule">Get schedule!</a>
+</div>
+</body>
+</html>

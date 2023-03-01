@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Teacher-listing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>Teachers</h2>
+    <p style="color:red">
+        <a th:text="${errorMessage}"></a>
+    </p>
+    <a class="btn btn-sm btn-secondary" href="/">Back to menu</a>
+    <a class="btn btn-sm btn-success" href="/teachers/new">Create new teacher</a>
+    <br/>
+    <br/>
+    <table class="table table-bordered table-hover">
+        <thead class="table-secondary">
+        <tr>
+            <th class="text-dark">First name</th>
+            <th class="text-dark">Last name</th>
+            <th class="text-dark">Faculty</th>
+            <th class="text-dark">Course (s)</th>
+            <th class="text-dark">Removal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="teacher : ${teachers}">
+            <td>
+                <a th:href="@{/teachers/{id}(id=${teacher.id})}"
+                   th:text="${teacher.firstName}">teacher</a>
+            </td>
+            <td>
+                <a th:href="@{/teachers/{id}(id=${teacher.id})}"
+                   th:text="${teacher.lastName}">teacher</a>
+            </td>
+            <td>
+                <a th:href="@{/teachers/{id}(id=${teacher.id})}"
+                   th:text="${faculties.getById(teacher.facultyId).facultyName}">faculty</a>
+            </td>
+            <td>
+                <th:block th:each="id : ${teacher.coursesId}">
+                    <a th:href="@{/teachers/{id}(id=${teacher.id})}"
+                       th:text="${courses.getById(id).courseName}">courses</a>
+                    <br/>
+                </th:block>
+            </td>
+            <td>
+                <form th:method="DELETE" th:action="@{/teachers/{id}(id=${teacher.id})}">
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

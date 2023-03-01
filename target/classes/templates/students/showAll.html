@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Student-listing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>Students</h2>
+    <a class="btn btn-sm btn-secondary" href="/">Back to menu</a>
+    <a class="btn btn-sm btn-success" href="/students/new">Create new student</a>
+    <br/>
+    <br/>
+    <table class="table table-bordered table-hover">
+        <thead class="table-secondary">
+        <tr>
+            <th class="text-dark">First name</th>
+            <th class="text-dark">Last name</th>
+            <th class="text-dark">Faculty</th>
+            <th class="text-dark">Course (s)</th>
+            <th class="text-dark">Removal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${students}">
+            <td>
+                <a th:href="@{/students/{id}(id=${student.id})}"
+                   th:text="${student.firstName}">student</a>
+            </td>
+            <td>
+                <a th:href="@{/students/{id}(id=${student.id})}"
+                   th:text="${student.lastName}">student</a>
+            </td>
+            <td>
+                <a th:href="@{/students/{id}(id=${student.id})}"
+                   th:text="${faculties.getById(student.facultyId).facultyName}">faculty</a>
+            </td>
+            <td>
+                <th:block th:each="id : ${student.coursesId}">
+                    <a th:href="@{/students/{id}(id=${student.id})}"
+                       th:text="${courses.getById(id).courseName}">courses</a>
+                    <br/>
+                </th:block>
+            </td>
+            <td>
+                <form th:method="DELETE" th:action="@{/students/{id}(id=${student.getId()})}">
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 11
+Implementation-Title: ClassTimetable
+Implementation-Version: 0.0.1-SNAPSHOT
+Main-Class: ua.com.vit.Application
+Created-By: Maven Integration for Eclipse
+

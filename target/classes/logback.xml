@@ -1,0 +1,28 @@
+<configuration>
+
+    <property name="DIRECTORY" value="log"></property>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${DIRECTORY}/classtimetable.log</file>
+        <encoder>
+            <pattern>%d{dd MMM;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="WARN">
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd MMM;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

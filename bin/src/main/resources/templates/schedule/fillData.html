@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Schedule-form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>Enter your data:</h2>
+    <a class="btn btn-sm btn-secondary" href="/">Back to menu</a>
+    <br/>
+    <br/>
+    <form th:method="GET" th:action="@{/schedule/show}">
+        <label>Name</label>
+        <select class="form-control form-control-sm selectpicker" data-header="Enter your name:"
+                data-dropup-auto="false" data-live-search="true" title="Please, start to enter your name here"
+                name="person">
+            <option th:each="teacher:${teachers}"
+                    th:value="${teacher}"
+                    th:text="${teacher.firstName + ' ' + teacher.lastName + ' (Teacher)'}">
+            </option>
+            <option th:each="student:${students}"
+                    th:value="${student}"
+                    th:text="${student.firstName + ' ' + student.lastName}">
+            </option>
+        </select>
+
+        <label>Beginning of the date range: </label>
+        <input class="form-control form-control-sm" type="date" name="beginDate"/>
+
+        <label>End of the date range: </label>
+        <input class="form-control form-control-sm" type="date" name="endDate"/>
+        <br/>
+        <input class="btn btn-sm btn-success" type="submit" value="Get schedule!">
+    </form>
+</div>
+</body>
+</html>

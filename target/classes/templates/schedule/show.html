@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Schedule</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>Your schedule</h2>
+    <a class="btn btn-sm btn-secondary" href="/">Back to menu</a>
+    <br/>
+    <br/>
+    <table class="table table-bordered table-hover">
+        <thead class="table-secondary">
+        <tr>
+            <th class="text-dark">Course</th>
+            <th class="text-dark">Date</th>
+            <th class="text-dark">Start time</th>
+            <th class="text-dark">End time</th>
+            <th class="text-dark">Classroom</th>
+            <th class="text-dark">Teacher</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="lesson : ${schedule}">
+            <td>
+                <a th:text="${courses.getById(lesson.courseId).courseName}">course</a>
+            </td>
+            <td>
+                <a th:text="${lesson.date}">date</a>
+            </td>
+            <td>
+                <a th:text="${lesson.startTime}">time</a>
+            </td>
+            <td>
+                <a th:text="${lesson.endTime}">time</a>
+            </td>
+            <td>
+                <a th:text="${classrooms.getById(lesson.classroomId).roomName}">classroom</a>
+            </td>
+
+            <td>
+                <a th:text="${teachers.getById(lesson.teacherId).firstName} + ' '
+                   + ${teachers.getById(lesson.teacherId).lastName}">teacher</a>
+            </td>
+        </tr>
+        </tbody>  
+    </table>
+</div>
+</body>
+</html>

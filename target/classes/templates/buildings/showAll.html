@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Building-listing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>Buildings of the university</h2>
+    <p style="color:red">
+        <a th:text="${errorMessage}"></a>
+    </p>
+    <a class="btn btn-sm btn-secondary" href="/">Back to menu</a>
+    <a class="btn btn-sm btn-success" href="/buildings/new">Create new building</a>
+    <br/>
+    <br/>
+    <table class="table table-bordered table-hover">
+        <thead class="table-secondary">
+        <tr>
+            <th class="text-dark">Building name</th>
+            <th class="text-dark">Removal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="building : ${buildings}">
+            <td>
+                <a th:href="@{/buildings/{id}(id=${building.id})}"
+                   th:text="${building.buildingName}">building</a>
+            </td>
+            <td>
+                <form th:method="DELETE"
+                      th:action="@{/buildings/{id}(id=${building.id})}">
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

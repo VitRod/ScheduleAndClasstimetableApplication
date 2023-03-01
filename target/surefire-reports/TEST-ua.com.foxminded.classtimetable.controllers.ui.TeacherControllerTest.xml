@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ua.com.foxminded.classtimetable.controllers.ui.TeacherControllerTest" time="0.125" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="E:\1_Java_Work\IDEA_Workspace_22_02_2023\Classtimetable\target\test-classes;E:\1_Java_Work\IDEA_Workspace_22_02_2023\Classtimetable\target\classes;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter\2.3.10.RELEASE\spring-boot-starter-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot\2.3.10.RELEASE\spring-boot-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-context\5.2.14.RELEASE\spring-context-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.10.RELEASE\spring-boot-autoconfigure-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.10.RELEASE\spring-boot-starter-logging-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\Admin\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\Admin\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-core\5.2.14.RELEASE\spring-core-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-jcl\5.2.14.RELEASE\spring-jcl-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.10.RELEASE\spring-boot-starter-web-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.10.RELEASE\spring-boot-starter-json-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.4\jackson-datatype-jdk8-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.4\jackson-module-parameter-names-2.11.4.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.10.RELEASE\spring-boot-starter-tomcat-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.45\tomcat-embed-core-9.0.45.jar;C:\Users\Admin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.45\tomcat-embed-websocket-9.0.45.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-web\5.2.14.RELEASE\spring-web-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-beans\5.2.14.RELEASE\spring-beans-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-webmvc\5.2.14.RELEASE\spring-webmvc-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-aop\5.2.14.RELEASE\spring-aop-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-expression\5.2.14.RELEASE\spring-expression-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\2.3.10.RELEASE\spring-boot-starter-thymeleaf-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\thymeleaf\thymeleaf-spring5\3.0.12.RELEASE\thymeleaf-spring5-3.0.12.RELEASE.jar;C:\Users\Admin\.m2\repository\org\thymeleaf\thymeleaf\3.0.12.RELEASE\thymeleaf-3.0.12.RELEASE.jar;C:\Users\Admin\.m2\repository\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;C:\Users\Admin\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\Admin\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.3.10.RELEASE\spring-boot-starter-data-jpa-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.3.10.RELEASE\spring-boot-starter-aop-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.3.10.RELEASE\spring-boot-starter-jdbc-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-jdbc\5.2.14.RELEASE\spring-jdbc-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\Admin\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\Admin\.m2\repository\org\springframework\data\spring-data-jpa\2.3.9.RELEASE\spring-data-jpa-2.3.9.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\data\spring-data-commons\2.3.9.RELEASE\spring-data-commons-2.3.9.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-orm\5.2.14.RELEASE\spring-orm-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-tx\5.2.14.RELEASE\spring-tx-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-aspects\5.2.14.RELEASE\spring-aspects-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-validation\2.3.10.RELEASE\spring-boot-starter-validation-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.3.10.RELEASE\spring-boot-starter-test-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-test\2.3.10.RELEASE\spring-boot-test-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.3.10.RELEASE\spring-boot-test-autoconfigure-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\Admin\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\Admin\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\Admin\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\Admin\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Admin\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Admin\.m2\repository\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.3\junit-jupiter-5.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.3\junit-jupiter-api-5.6.3.jar;C:\Users\Admin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-commons\1.6.3\junit-platform-commons-1.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.3\junit-jupiter-params-5.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.3\junit-jupiter-engine-5.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\vintage\junit-vintage-engine\5.6.3\junit-vintage-engine-5.6.3.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-engine\1.6.3\junit-platform-engine-1.6.3.jar;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;C:\Users\Admin\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\Admin\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-test\5.2.14.RELEASE\spring-test-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\Admin\.m2\repository\org\hibernate\hibernate-core\5.4.30.Final\hibernate-core-5.4.30.Final.jar;C:\Users\Admin\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\Admin\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Admin\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy\1.10.22\byte-buddy-1.10.22.jar;C:\Users\Admin\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Admin\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Admin\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\Admin\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Admin\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Admin\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\Admin\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.4\jaxb-runtime-2.3.4.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\txw2\2.3.4\txw2-2.3.4.jar;C:\Users\Admin\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\Admin\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\Admin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Admin\.m2\repository\org\hibernate\validator\hibernate-validator\7.0.1.Final\hibernate-validator-7.0.1.Final.jar;C:\Users\Admin\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Admin\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Admin\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Admin\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\Admin\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\Admin\.m2\repository\org\postgresql\postgresql\42.2.18\postgresql-42.2.18.jar;C:\Users\Admin\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Admin\.m2\repository\org\springdoc\springdoc-openapi-ui\1.6.1\springdoc-openapi-ui-1.6.1.jar;C:\Users\Admin\.m2\repository\org\springdoc\springdoc-openapi-webmvc-core\1.6.1\springdoc-openapi-webmvc-core-1.6.1.jar;C:\Users\Admin\.m2\repository\org\springdoc\springdoc-openapi-common\1.6.1\springdoc-openapi-common-1.6.1.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-models\2.1.11\swagger-models-2.1.11.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.11\swagger-annotations-2.1.11.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-integration\2.1.11\swagger-integration-2.1.11.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-core\2.1.11\swagger-core-2.1.11.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.11.4\jackson-dataformat-yaml-2.11.4.jar;C:\Users\Admin\.m2\repository\io\github\classgraph\classgraph\4.8.116\classgraph-4.8.116.jar;C:\Users\Admin\.m2\repository\org\webjars\swagger-ui\4.1.3\swagger-ui-4.1.3.jar;C:\Users\Admin\.m2\repository\org\webjars\webjars-locator-core\0.45\webjars-locator-core-0.45.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\Admin\.m2\repository\org\mockito\mockito-core\3.7.7\mockito-core-3.7.7.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.22\byte-buddy-agent-1.10.22.jar;C:\Users\Admin\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\Admin\.m2\repository\com\h2database\h2\2.0.202\h2-2.0.202.jar;"/>
+    <property name="java.vm.vendor" value="Temurin"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Helsinki"/>
+    <property name="user.country.format" value="GB"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\JAVA\jdk1.8.0_352\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire4451887401512395404\surefirebooter4980853108217087325.jar C:\Users\Admin\AppData\Local\Temp\surefire4451887401512395404 2023-02-26T19-05-25_929-jvmRun1 surefire5098778781691221322tmp surefire_02154898216159521232tmp"/>
+    <property name="surefire.test.class.path" value="E:\1_Java_Work\IDEA_Workspace_22_02_2023\Classtimetable\target\test-classes;E:\1_Java_Work\IDEA_Workspace_22_02_2023\Classtimetable\target\classes;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter\2.3.10.RELEASE\spring-boot-starter-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot\2.3.10.RELEASE\spring-boot-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-context\5.2.14.RELEASE\spring-context-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.10.RELEASE\spring-boot-autoconfigure-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.10.RELEASE\spring-boot-starter-logging-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\Admin\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\Admin\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-core\5.2.14.RELEASE\spring-core-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-jcl\5.2.14.RELEASE\spring-jcl-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.10.RELEASE\spring-boot-starter-web-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.10.RELEASE\spring-boot-starter-json-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.4\jackson-databind-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.4\jackson-annotations-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.4\jackson-datatype-jdk8-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.4\jackson-datatype-jsr310-2.11.4.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.4\jackson-module-parameter-names-2.11.4.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.10.RELEASE\spring-boot-starter-tomcat-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.45\tomcat-embed-core-9.0.45.jar;C:\Users\Admin\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.45\tomcat-embed-websocket-9.0.45.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-web\5.2.14.RELEASE\spring-web-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-beans\5.2.14.RELEASE\spring-beans-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-webmvc\5.2.14.RELEASE\spring-webmvc-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-aop\5.2.14.RELEASE\spring-aop-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-expression\5.2.14.RELEASE\spring-expression-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-thymeleaf\2.3.10.RELEASE\spring-boot-starter-thymeleaf-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\thymeleaf\thymeleaf-spring5\3.0.12.RELEASE\thymeleaf-spring5-3.0.12.RELEASE.jar;C:\Users\Admin\.m2\repository\org\thymeleaf\thymeleaf\3.0.12.RELEASE\thymeleaf-3.0.12.RELEASE.jar;C:\Users\Admin\.m2\repository\org\attoparser\attoparser\2.0.5.RELEASE\attoparser-2.0.5.RELEASE.jar;C:\Users\Admin\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\Admin\.m2\repository\org\thymeleaf\extras\thymeleaf-extras-java8time\3.0.4.RELEASE\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.3.10.RELEASE\spring-boot-starter-data-jpa-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.3.10.RELEASE\spring-boot-starter-aop-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\aspectj\aspectjweaver\1.9.6\aspectjweaver-1.9.6.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\2.3.10.RELEASE\spring-boot-starter-jdbc-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-jdbc\5.2.14.RELEASE\spring-jdbc-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\jakarta\transaction\jakarta.transaction-api\1.3.3\jakarta.transaction-api-1.3.3.jar;C:\Users\Admin\.m2\repository\jakarta\persistence\jakarta.persistence-api\2.2.3\jakarta.persistence-api-2.2.3.jar;C:\Users\Admin\.m2\repository\org\springframework\data\spring-data-jpa\2.3.9.RELEASE\spring-data-jpa-2.3.9.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\data\spring-data-commons\2.3.9.RELEASE\spring-data-commons-2.3.9.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-orm\5.2.14.RELEASE\spring-orm-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-tx\5.2.14.RELEASE\spring-tx-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-aspects\5.2.14.RELEASE\spring-aspects-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-validation\2.3.10.RELEASE\spring-boot-starter-validation-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-starter-test\2.3.10.RELEASE\spring-boot-starter-test-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-test\2.3.10.RELEASE\spring-boot-test-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\2.3.10.RELEASE\spring-boot-test-autoconfigure-2.3.10.RELEASE.jar;C:\Users\Admin\.m2\repository\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;C:\Users\Admin\.m2\repository\net\minidev\json-smart\2.3\json-smart-2.3.jar;C:\Users\Admin\.m2\repository\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;C:\Users\Admin\.m2\repository\org\ow2\asm\asm\5.0.4\asm-5.0.4.jar;C:\Users\Admin\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;C:\Users\Admin\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;C:\Users\Admin\.m2\repository\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.3\junit-jupiter-5.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.3\junit-jupiter-api-5.6.3.jar;C:\Users\Admin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-commons\1.6.3\junit-platform-commons-1.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.3\junit-jupiter-params-5.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.3\junit-jupiter-engine-5.6.3.jar;C:\Users\Admin\.m2\repository\org\junit\vintage\junit-vintage-engine\5.6.3\junit-vintage-engine-5.6.3.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-engine\1.6.3\junit-platform-engine-1.6.3.jar;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;C:\Users\Admin\.m2\repository\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;C:\Users\Admin\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Admin\.m2\repository\org\springframework\spring-test\5.2.14.RELEASE\spring-test-5.2.14.RELEASE.jar;C:\Users\Admin\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\Admin\.m2\repository\org\hibernate\hibernate-core\5.4.30.Final\hibernate-core-5.4.30.Final.jar;C:\Users\Admin\.m2\repository\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;C:\Users\Admin\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Admin\.m2\repository\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy\1.10.22\byte-buddy-1.10.22.jar;C:\Users\Admin\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Admin\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Admin\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\Admin\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Admin\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Admin\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\Admin\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.4\jaxb-runtime-2.3.4.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\txw2\2.3.4\txw2-2.3.4.jar;C:\Users\Admin\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.12\istack-commons-runtime-3.0.12.jar;C:\Users\Admin\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\Admin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Admin\.m2\repository\org\hibernate\validator\hibernate-validator\7.0.1.Final\hibernate-validator-7.0.1.Final.jar;C:\Users\Admin\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Admin\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Admin\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Admin\.m2\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;C:\Users\Admin\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\Admin\.m2\repository\org\postgresql\postgresql\42.2.18\postgresql-42.2.18.jar;C:\Users\Admin\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Admin\.m2\repository\org\springdoc\springdoc-openapi-ui\1.6.1\springdoc-openapi-ui-1.6.1.jar;C:\Users\Admin\.m2\repository\org\springdoc\springdoc-openapi-webmvc-core\1.6.1\springdoc-openapi-webmvc-core-1.6.1.jar;C:\Users\Admin\.m2\repository\org\springdoc\springdoc-openapi-common\1.6.1\springdoc-openapi-common-1.6.1.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-models\2.1.11\swagger-models-2.1.11.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.11\swagger-annotations-2.1.11.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-integration\2.1.11\swagger-integration-2.1.11.jar;C:\Users\Admin\.m2\repository\io\swagger\core\v3\swagger-core\2.1.11\swagger-core-2.1.11.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.11.4\jackson-dataformat-yaml-2.11.4.jar;C:\Users\Admin\.m2\repository\io\github\classgraph\classgraph\4.8.116\classgraph-4.8.116.jar;C:\Users\Admin\.m2\repository\org\webjars\swagger-ui\4.1.3\swagger-ui-4.1.3.jar;C:\Users\Admin\.m2\repository\org\webjars\webjars-locator-core\0.45\webjars-locator-core-0.45.jar;C:\Users\Admin\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.4\jackson-core-2.11.4.jar;C:\Users\Admin\.m2\repository\org\mockito\mockito-core\3.7.7\mockito-core-3.7.7.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy-agent\1.10.22\byte-buddy-agent-1.10.22.jar;C:\Users\Admin\.m2\repository\org\objenesis\objenesis\3.1\objenesis-3.1.jar;C:\Users\Admin\.m2\repository\com\h2database\h2\2.0.202\h2-2.0.202.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Admin"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\JAVA\jdk1.8.0_352\jre"/>
+    <property name="basedir" value="E:\1_Java_Work\IDEA_Workspace_22_02_2023\Classtimetable"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire4451887401512395404\surefirebooter4980853108217087325.jar;C:\\Users\\Admin\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.6\\org.jacoco.agent-0.8.6-runtime.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\resources.jar;C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\rt.jar;C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\sunrsasign.jar;C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\jsse.jar;C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\jce.jar;C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\charsets.jar;C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\jfr.jar;C:\Program Files\JAVA\jdk1.8.0_352\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_352-b08"/>
+    <property name="user.name" value="Admin"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="spring.beaninfo.ignore" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Admin\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\Admin\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2022.2.1"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="1.8.0_352"/>
+    <property name="user.dir" value="E:\1_Java_Work\IDEA_Workspace_22_02_2023\Classtimetable"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="2332"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="user.language.format" value="en"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\JAVA\jdk1.8.0_352\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Python2_7_13\;C:\Program Files\Python3_10\Scripts\;C:\Program Files\Python3_10\;C:\Program Files\Python3_9\Scripts\;C:\Program Files\Python3_9\;C:\Program Files\Python3_11\Scripts\;C:\Program Files\Python3_11\;C:\Program Files\Python38\Scripts\;C:\Program Files\Python38\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\JAVA\jdk1.8.0_352\bin;C:\Program Files\MAVEN\apache-maven-3.8.6\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;E:\1WORK_ProgramFiles\VS_Code_1,73\VSCode_2022\Microsoft VS Code\bin;E:\IntelliJ_IDEA_Community_2022.3\bin;;;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;E:\1WORK_ProgramFiles\PYTHON_3_WORK\PyCHARM_PROF_2022.2.1\bin;;C:\Users\Admin\AppData\Local\Yarn\bin;C:\Users\Admin\AppData\Roaming\npm;E:\1WORK_ProgramFiles\IDEA_Ultimate_2022.2.1\IntelliJ IDEA 2022.2.1\bin;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Temurin"/>
+    <property name="java.vm.version" value="25.352-b08"/>
+    <property name="java.specification.maintenance.version" value="4"/>
+    <property name="java.ext.dirs" value="C:\Program Files\JAVA\jdk1.8.0_352\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="should_getListOfTeachers_when_controllerCallsShowAllMethod" classname="ua.com.foxminded.classtimetable.controllers.ui.TeacherControllerTest" time="0.037">
+    <system-out><![CDATA[26 Feb;19:05:46.433 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+26 Feb;19:05:46.433 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+26 Feb;19:05:46.435 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+Hibernate: select teacher0_.id as id1_7_, teacher0_.faculty_id as faculty_4_7_, teacher0_.first_name as first_na2_7_, teacher0_.last_name as last_nam3_7_ from teachers teacher0_
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+26 Feb;19:05:46.442 [main] INFO  u.c.f.c.service.TeacherService - getAll():
+ [Teacher{id=1, firstName='Albert', lastName='Johnson', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=2, firstName='Stanley', lastName='Gruber', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=3, firstName='Freya', lastName='Shepp', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=4, firstName='Olivia', lastName='Blake', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=5, firstName='Scarlett', lastName='Nimoy', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=6, firstName='Ellie', lastName='Purh', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=7, firstName='Charlie', lastName='Byrne', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=8, firstName='Samuel', lastName='Travis', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=9, firstName='Albert', lastName='Hill', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=10, firstName='Joshua', lastName='Eve', faculty=Faculty{id=2, facultyName='Changed faculty name'}}, Teacher{id=11, firstName='Sophia', lastName='Roos', faculty=Faculty{id=2, facultyName='Changed faculty name'}}, Teacher{id=12, firstName='Mia', lastName='Brown', faculty=Faculty{id=2, facultyName='Changed faculty name'}}]
+26 Feb;19:05:46.450 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=3, facultyName='Faculty of Arts'}
+26 Feb;19:05:46.451 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=1, courseName='History'}
+26 Feb;19:05:46.452 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=3, facultyName='Faculty of Arts'}
+26 Feb;19:05:46.452 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=2, courseName='Philosophy'}
+26 Feb;19:05:46.453 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=3, facultyName='Faculty of Arts'}
+26 Feb;19:05:46.453 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=3, courseName='Another course's name'}
+26 Feb;19:05:46.454 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=3, facultyName='Faculty of Arts'}
+26 Feb;19:05:46.454 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=4, courseName='Political science'}
+26 Feb;19:05:46.454 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=3, facultyName='Faculty of Arts'}
+26 Feb;19:05:46.455 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=5, courseName='Culture'}
+26 Feb;19:05:46.455 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=1, facultyName='Changed faculty name'}
+26 Feb;19:05:46.456 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=6, courseName='Biology'}
+26 Feb;19:05:46.456 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=1, facultyName='Changed faculty name'}
+26 Feb;19:05:46.457 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=6, courseName='Biology'}
+26 Feb;19:05:46.457 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=1, facultyName='Changed faculty name'}
+26 Feb;19:05:46.457 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=7, courseName='Chemistry'}
+26 Feb;19:05:46.458 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=1, facultyName='Changed faculty name'}
+26 Feb;19:05:46.458 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=7, courseName='Chemistry'}
+26 Feb;19:05:46.459 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=2, facultyName='Changed faculty name'}
+26 Feb;19:05:46.459 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=8, courseName='Mathematics'}
+26 Feb;19:05:46.460 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=2, facultyName='Changed faculty name'}
+26 Feb;19:05:46.460 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=9, courseName='Physics'}
+26 Feb;19:05:46.460 [main] INFO  u.c.f.c.service.FacultyService - getById: faculty = Faculty{id=2, facultyName='Changed faculty name'}
+26 Feb;19:05:46.461 [main] INFO  u.c.f.c.service.CourseService - getById: course = Course{id=10, courseName='Geometry'}
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /teachers
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = ua.com.foxminded.classtimetable.controllers.ui.TeacherController
+           Method = ua.com.foxminded.classtimetable.controllers.ui.TeacherController#showAll(ModelMap)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = teachers/showAll
+             View = null
+        Attribute = teachers
+            value = [TeacherDto{id=1, firstName='Albert', lastName='Johnson', facultyId=3, coursesId=[1]}, TeacherDto{id=2, firstName='Stanley', lastName='Gruber', facultyId=3, coursesId=[2]}, TeacherDto{id=3, firstName='Freya', lastName='Shepp', facultyId=3, coursesId=[3]}, TeacherDto{id=4, firstName='Olivia', lastName='Blake', facultyId=3, coursesId=[4]}, TeacherDto{id=5, firstName='Scarlett', lastName='Nimoy', facultyId=3, coursesId=[5]}, TeacherDto{id=6, firstName='Ellie', lastName='Purh', facultyId=1, coursesId=[6]}, TeacherDto{id=7, firstName='Charlie', lastName='Byrne', facultyId=1, coursesId=[6]}, TeacherDto{id=8, firstName='Samuel', lastName='Travis', facultyId=1, coursesId=[7]}, TeacherDto{id=9, firstName='Albert', lastName='Hill', facultyId=1, coursesId=[7]}, TeacherDto{id=10, firstName='Joshua', lastName='Eve', facultyId=2, coursesId=[8]}, TeacherDto{id=11, firstName='Sophia', lastName='Roos', facultyId=2, coursesId=[9]}, TeacherDto{id=12, firstName='Mia', lastName='Brown', facultyId=2, coursesId=[10]}]
+        Attribute = faculties
+            value = ua.com.foxminded.classtimetable.service.FacultyService@421acd02
+           errors = []
+        Attribute = courses
+            value = ua.com.foxminded.classtimetable.service.CourseService@78d664d9
+           errors = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teacher-listing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <a class="navbar-brand" href="/">Class Timetable</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">University structure</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/buildings">Buildings</a>
+                <a class="dropdown-item" href="/classrooms">Study rooms</a>
+                <a class="dropdown-item" href="/faculties">Faculties</a>
+                <a class="dropdown-item" href="/courses">Courses</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">Personalities</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/students">Students</a>
+                <a class="dropdown-item" href="/teachers">Teachers</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/lessons">Current lessons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/schedule">Show the personal schedule</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <br/>
+    <h2>Teachers</h2>
+    <p style="color:red">
+        <a></a>
+    </p>
+    <a class="btn btn-sm btn-secondary" href="/">Back to menu</a>
+    <a class="btn btn-sm btn-success" href="/teachers/new">Create new teacher</a>
+    <br/>
+    <br/>
+    <table class="table table-bordered table-hover">
+        <thead class="table-secondary">
+        <tr>
+            <th class="text-dark">First name</th>
+            <th class="text-dark">Last name</th>
+            <th class="text-dark">Faculty</th>
+            <th class="text-dark">Course (s)</th>
+            <th class="text-dark">Removal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <a href="/teachers/1">Albert</a>
+            </td>
+            <td>
+                <a href="/teachers/1">Johnson</a>
+            </td>
+            <td>
+                <a href="/teachers/1">Faculty of Arts</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/1">History</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/1"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/2">Stanley</a>
+            </td>
+            <td>
+                <a href="/teachers/2">Gruber</a>
+            </td>
+            <td>
+                <a href="/teachers/2">Faculty of Arts</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/2">Philosophy</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/2"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/3">Freya</a>
+            </td>
+            <td>
+                <a href="/teachers/3">Shepp</a>
+            </td>
+            <td>
+                <a href="/teachers/3">Faculty of Arts</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/3">Another course&#39;s name</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/3"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/4">Olivia</a>
+            </td>
+            <td>
+                <a href="/teachers/4">Blake</a>
+            </td>
+            <td>
+                <a href="/teachers/4">Faculty of Arts</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/4">Political science</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/4"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/5">Scarlett</a>
+            </td>
+            <td>
+                <a href="/teachers/5">Nimoy</a>
+            </td>
+            <td>
+                <a href="/teachers/5">Faculty of Arts</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/5">Culture</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/5"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/6">Ellie</a>
+            </td>
+            <td>
+                <a href="/teachers/6">Purh</a>
+            </td>
+            <td>
+                <a href="/teachers/6">Changed faculty name</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/6">Biology</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/6"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/7">Charlie</a>
+            </td>
+            <td>
+                <a href="/teachers/7">Byrne</a>
+            </td>
+            <td>
+                <a href="/teachers/7">Changed faculty name</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/7">Biology</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/7"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/8">Samuel</a>
+            </td>
+            <td>
+                <a href="/teachers/8">Travis</a>
+            </td>
+            <td>
+                <a href="/teachers/8">Changed faculty name</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/8">Chemistry</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/8"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/9">Albert</a>
+            </td>
+            <td>
+                <a href="/teachers/9">Hill</a>
+            </td>
+            <td>
+                <a href="/teachers/9">Changed faculty name</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/9">Chemistry</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/9"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/10">Joshua</a>
+            </td>
+            <td>
+                <a href="/teachers/10">Eve</a>
+            </td>
+            <td>
+                <a href="/teachers/10">Changed faculty name</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/10">Mathematics</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/10"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/11">Sophia</a>
+            </td>
+            <td>
+                <a href="/teachers/11">Roos</a>
+            </td>
+            <td>
+                <a href="/teachers/11">Changed faculty name</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/11">Physics</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/11"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/teachers/12">Mia</a>
+            </td>
+            <td>
+                <a href="/teachers/12">Brown</a>
+            </td>
+            <td>
+                <a href="/teachers/12">Changed faculty name</a>
+            </td>
+            <td>
+                
+                    <a href="/teachers/12">Geometry</a>
+                    <br/>
+                
+            </td>
+            <td>
+                <form method="post" action="/teachers/12"><input type="hidden" name="_method" value="DELETE"/>
+                    <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: select teacher0_.id as id1_7_, teacher0_.faculty_id as faculty_4_7_, teacher0_.first_name as first_na2_7_, teacher0_.last_name as last_nam3_7_ from teachers teacher0_
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+26 Feb;19:05:46.467 [main] INFO  u.c.f.c.service.TeacherService - getAll():
+ [Teacher{id=1, firstName='Albert', lastName='Johnson', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=2, firstName='Stanley', lastName='Gruber', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=3, firstName='Freya', lastName='Shepp', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=4, firstName='Olivia', lastName='Blake', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=5, firstName='Scarlett', lastName='Nimoy', faculty=Faculty{id=3, facultyName='Faculty of Arts'}}, Teacher{id=6, firstName='Ellie', lastName='Purh', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=7, firstName='Charlie', lastName='Byrne', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=8, firstName='Samuel', lastName='Travis', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=9, firstName='Albert', lastName='Hill', faculty=Faculty{id=1, facultyName='Changed faculty name'}}, Teacher{id=10, firstName='Joshua', lastName='Eve', faculty=Faculty{id=2, facultyName='Changed faculty name'}}, Teacher{id=11, firstName='Sophia', lastName='Roos', faculty=Faculty{id=2, facultyName='Changed faculty name'}}, Teacher{id=12, firstName='Mia', lastName='Brown', faculty=Faculty{id=2, facultyName='Changed faculty name'}}]
+]]></system-out>
+  </testcase>
+  <testcase name="should_addNewTeacherToDatabase_when_controllerCallsAddToDBMethod" classname="ua.com.foxminded.classtimetable.controllers.ui.TeacherControllerTest" time="0.016">
+    <system-out><![CDATA[26 Feb;19:05:46.471 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+26 Feb;19:05:46.471 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+26 Feb;19:05:46.473 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select course0_.id as id1_2_0_, course0_.course_name as course_n2_2_0_, courseteac1_.course_id as course_i2_8_1_, teacher2_.id as teacher_1_8_1_, teacher2_.id as id1_7_2_, teacher2_.faculty_id as faculty_4_7_2_, teacher2_.first_name as first_na2_7_2_, teacher2_.last_name as last_nam3_7_2_, faculty3_.id as id1_3_3_, faculty3_.faculty_name as faculty_2_3_3_ from courses course0_ left outer join teachers_courses courseteac1_ on course0_.id=courseteac1_.course_id left outer join teachers teacher2_ on courseteac1_.teacher_id=teacher2_.id left outer join faculties faculty3_ on teacher2_.faculty_id=faculty3_.id where course0_.id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select course0_.id as id1_2_0_, course0_.course_name as course_n2_2_0_, courseteac1_.course_id as course_i2_8_1_, teacher2_.id as teacher_1_8_1_, teacher2_.id as id1_7_2_, teacher2_.faculty_id as faculty_4_7_2_, teacher2_.first_name as first_na2_7_2_, teacher2_.last_name as last_nam3_7_2_, faculty3_.id as id1_3_3_, faculty3_.faculty_name as faculty_2_3_3_ from courses course0_ left outer join teachers_courses courseteac1_ on course0_.id=courseteac1_.course_id left outer join teachers teacher2_ on courseteac1_.teacher_id=teacher2_.id left outer join faculties faculty3_ on teacher2_.faculty_id=faculty3_.id where course0_.id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.479 [main] INFO  u.c.f.c.service.TeacherService - create: teacher = Teacher{id=0, firstName='Jeff', lastName='Coff', faculty=Faculty{id=2, facultyName='Changed faculty name'}}
+Hibernate: insert into teachers (faculty_id, first_name, last_name) values (?, ?, ?)
+Hibernate: insert into teachers_courses (teacher_id, course_id) values (?, ?)
+Hibernate: insert into teachers_courses (teacher_id, course_id) values (?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="should_getOneTeacher_when_controllerCallsShowByIdMethod" classname="ua.com.foxminded.classtimetable.controllers.ui.TeacherControllerTest" time="0.032">
+    <system-out><![CDATA[26 Feb;19:05:46.488 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+26 Feb;19:05:46.488 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+26 Feb;19:05:46.490 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+Hibernate: select teacher0_.id as id1_7_0_, teacher0_.faculty_id as faculty_4_7_0_, teacher0_.first_name as first_na2_7_0_, teacher0_.last_name as last_nam3_7_0_, faculty1_.id as id1_3_1_, faculty1_.faculty_name as faculty_2_3_1_, teachercou2_.teacher_id as teacher_1_8_2_, course3_.id as course_i2_8_2_, course3_.id as id1_2_3_, course3_.course_name as course_n2_2_3_ from teachers teacher0_ left outer join faculties faculty1_ on teacher0_.faculty_id=faculty1_.id left outer join teachers_courses teachercou2_ on teacher0_.id=teachercou2_.teacher_id left outer join courses course3_ on teachercou2_.course_id=course3_.id where teacher0_.id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.493 [main] INFO  u.c.f.c.service.TeacherService - getById: teacher = Teacher{id=9, firstName='Albert', lastName='Hill', faculty=Faculty{id=1, facultyName='Changed faculty name'}}
+Hibernate: select faculty0_.id as id1_3_, faculty0_.faculty_name as faculty_2_3_ from faculties faculty0_
+26 Feb;19:05:46.494 [main] INFO  u.c.f.c.service.FacultyService - getAll():
+ [Faculty{id=1, facultyName='Changed faculty name'}, Faculty{id=2, facultyName='Changed faculty name'}, Faculty{id=3, facultyName='Faculty of Arts'}, Faculty{id=5, facultyName='Faculty name'}, Faculty{id=7, facultyName='Faculty name'}]
+Hibernate: select course0_.id as id1_2_, course0_.course_name as course_n2_2_ from courses course0_
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.498 [main] INFO  u.c.f.c.service.CourseService - getAll():
+ [Course{id=1, courseName='History'}, Course{id=2, courseName='Philosophy'}, Course{id=3, courseName='Another course's name'}, Course{id=4, courseName='Political science'}, Course{id=5, courseName='Culture'}, Course{id=6, courseName='Biology'}, Course{id=7, courseName='Chemistry'}, Course{id=8, courseName='Mathematics'}, Course{id=9, courseName='Physics'}, Course{id=10, courseName='Geometry'}, Course{id=13, courseName='Course's name'}]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /teachers/9
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = ua.com.foxminded.classtimetable.controllers.ui.TeacherController
+           Method = ua.com.foxminded.classtimetable.controllers.ui.TeacherController#showById(int, ModelMap)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = teachers/showById
+             View = null
+        Attribute = teacher
+            value = TeacherDto{id=9, firstName='Albert', lastName='Hill', facultyId=1, coursesId=[7]}
+           errors = []
+        Attribute = faculties
+            value = [Faculty{id=1, facultyName='Changed faculty name'}, Faculty{id=2, facultyName='Changed faculty name'}, Faculty{id=3, facultyName='Faculty of Arts'}, Faculty{id=5, facultyName='Faculty name'}, Faculty{id=7, facultyName='Faculty name'}]
+        Attribute = allCourses
+            value = [Course{id=1, courseName='History'}, Course{id=2, courseName='Philosophy'}, Course{id=3, courseName='Another course's name'}, Course{id=4, courseName='Political science'}, Course{id=5, courseName='Culture'}, Course{id=6, courseName='Biology'}, Course{id=7, courseName='Chemistry'}, Course{id=8, courseName='Mathematics'}, Course{id=9, courseName='Physics'}, Course{id=10, courseName='Geometry'}, Course{id=13, courseName='Course's name'}]
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teacher-editing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <a class="navbar-brand" href="/">Class Timetable</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">University structure</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/buildings">Buildings</a>
+                <a class="dropdown-item" href="/classrooms">Study rooms</a>
+                <a class="dropdown-item" href="/faculties">Faculties</a>
+                <a class="dropdown-item" href="/courses">Courses</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">Personalities</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/students">Students</a>
+                <a class="dropdown-item" href="/teachers">Teachers</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/lessons">Current lessons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/schedule">Show the personal schedule</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <br/>
+    <h2>Teacher changing page</h2>
+    <p style="color:red">
+        <a></a>
+    </p>
+    <a class="btn btn-sm btn-secondary" href="/students">Back to table</a>
+    <br/>
+    <br/>
+    <form method="post" action="/teachers/9"><input type="hidden" name="_method" value="PUT"/>
+        <label>Change first name:</label>
+        <input class="form-control form-control-sm" type="text" id="firstName" name="firstName" value="Albert"/>
+
+        <label>Change last name:</label>
+        <input class="form-control form-control-sm" type="text" id="lastName" name="lastName" value="Hill"/>
+
+        <label>Select faculty:</label>
+        <select class="form-control form-control-sm" id="facultyId" name="facultyId">
+            <option value="1" selected="selected">Changed faculty name</option>
+            <option value="2">Changed faculty name</option>
+            <option value="3">Faculty of Arts</option>
+            <option value="5">Faculty name</option>
+            <option value="7">Faculty name</option>
+        </select>
+
+        <label>Select course:</label>
+        <input type="hidden" name="_coursesId" value="1"/><select class="form-control form-control-sm selectpicker" multiple data-dropup-auto="false" id="coursesId" name="coursesId">
+            <option value="1">History</option>
+            <option value="2">Philosophy</option>
+            <option value="3">Another course&#39;s name</option>
+            <option value="4">Political science</option>
+            <option value="5">Culture</option>
+            <option value="6">Biology</option>
+            <option value="7" selected="selected">Chemistry</option>
+            <option value="8">Mathematics</option>
+            <option value="9">Physics</option>
+            <option value="10">Geometry</option>
+            <option value="13">Course&#39;s name</option>
+        </select>
+        <br/>
+        <br/>
+        <input class="btn btn-sm btn-success" type="submit" value="Update!">
+    </form>
+    <br/>
+    <form method="post" action="/teachers/9"><input type="hidden" name="_method" value="DELETE"/>
+        <input class="btn btn-sm btn-danger" type="submit" value="Delete!"/>
+    </form>
+</div>
+</body>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: select teacher0_.id as id1_7_0_, teacher0_.faculty_id as faculty_4_7_0_, teacher0_.first_name as first_na2_7_0_, teacher0_.last_name as last_nam3_7_0_, faculty1_.id as id1_3_1_, faculty1_.faculty_name as faculty_2_3_1_, teachercou2_.teacher_id as teacher_1_8_2_, course3_.id as course_i2_8_2_, course3_.id as id1_2_3_, course3_.course_name as course_n2_2_3_ from teachers teacher0_ left outer join faculties faculty1_ on teacher0_.faculty_id=faculty1_.id left outer join teachers_courses teachercou2_ on teacher0_.id=teachercou2_.teacher_id left outer join courses course3_ on teachercou2_.course_id=course3_.id where teacher0_.id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.512 [main] INFO  u.c.f.c.service.TeacherService - getById: teacher = Teacher{id=9, firstName='Albert', lastName='Hill', faculty=Faculty{id=1, facultyName='Changed faculty name'}}
+Hibernate: select faculty0_.id as id1_3_, faculty0_.faculty_name as faculty_2_3_ from faculties faculty0_
+26 Feb;19:05:46.513 [main] INFO  u.c.f.c.service.FacultyService - getAll():
+ [Faculty{id=1, facultyName='Changed faculty name'}, Faculty{id=2, facultyName='Changed faculty name'}, Faculty{id=3, facultyName='Faculty of Arts'}, Faculty{id=5, facultyName='Faculty name'}, Faculty{id=7, facultyName='Faculty name'}]
+Hibernate: select course0_.id as id1_2_, course0_.course_name as course_n2_2_ from courses course0_
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.517 [main] INFO  u.c.f.c.service.CourseService - getAll():
+ [Course{id=1, courseName='History'}, Course{id=2, courseName='Philosophy'}, Course{id=3, courseName='Another course's name'}, Course{id=4, courseName='Political science'}, Course{id=5, courseName='Culture'}, Course{id=6, courseName='Biology'}, Course{id=7, courseName='Chemistry'}, Course{id=8, courseName='Mathematics'}, Course{id=9, courseName='Physics'}, Course{id=10, courseName='Geometry'}, Course{id=13, courseName='Course's name'}]
+]]></system-out>
+  </testcase>
+  <testcase name="should_updateTeacherInDatabase_when_controllerCallsUpdateMethod" classname="ua.com.foxminded.classtimetable.controllers.ui.TeacherControllerTest" time="0.011">
+    <system-out><![CDATA[26 Feb;19:05:46.521 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+26 Feb;19:05:46.521 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+26 Feb;19:05:46.522 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+26 Feb;19:05:46.524 [main] WARN  o.s.validation.DataBinder - Skipping URI variable 'id' because request contains bind value with same name.
+Hibernate: select faculty0_.id as id1_3_0_, faculty0_.faculty_name as faculty_2_3_0_ from faculties faculty0_ where faculty0_.id=?
+Hibernate: select course0_.id as id1_2_0_, course0_.course_name as course_n2_2_0_, courseteac1_.course_id as course_i2_8_1_, teacher2_.id as teacher_1_8_1_, teacher2_.id as id1_7_2_, teacher2_.faculty_id as faculty_4_7_2_, teacher2_.first_name as first_na2_7_2_, teacher2_.last_name as last_nam3_7_2_, faculty3_.id as id1_3_3_, faculty3_.faculty_name as faculty_2_3_3_ from courses course0_ left outer join teachers_courses courseteac1_ on course0_.id=courseteac1_.course_id left outer join teachers teacher2_ on courseteac1_.teacher_id=teacher2_.id left outer join faculties faculty3_ on teacher2_.faculty_id=faculty3_.id where course0_.id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select course0_.id as id1_2_0_, course0_.course_name as course_n2_2_0_, courseteac1_.course_id as course_i2_8_1_, teacher2_.id as teacher_1_8_1_, teacher2_.id as id1_7_2_, teacher2_.faculty_id as faculty_4_7_2_, teacher2_.first_name as first_na2_7_2_, teacher2_.last_name as last_nam3_7_2_, faculty3_.id as id1_3_3_, faculty3_.faculty_name as faculty_2_3_3_ from courses course0_ left outer join teachers_courses courseteac1_ on course0_.id=courseteac1_.course_id left outer join teachers teacher2_ on courseteac1_.teacher_id=teacher2_.id left outer join faculties faculty3_ on teacher2_.faculty_id=faculty3_.id where course0_.id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.526 [main] INFO  u.c.f.c.service.TeacherService - update: teacher = Teacher{id=3, firstName='Francesco', lastName='Donni', faculty=Faculty{id=2, facultyName='Changed faculty name'}}
+Hibernate: update teachers set faculty_id=?, first_name=?, last_name=? where id=?
+Hibernate: insert into teachers_courses (teacher_id, course_id) values (?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="should_showCreationView_when_controllerCallsCreateMethod" classname="ua.com.foxminded.classtimetable.controllers.ui.TeacherControllerTest" time="0.021">
+    <system-out><![CDATA[26 Feb;19:05:46.533 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+26 Feb;19:05:46.533 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+26 Feb;19:05:46.534 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+Hibernate: select faculty0_.id as id1_3_, faculty0_.faculty_name as faculty_2_3_ from faculties faculty0_
+26 Feb;19:05:46.536 [main] INFO  u.c.f.c.service.FacultyService - getAll():
+ [Faculty{id=1, facultyName='Changed faculty name'}, Faculty{id=2, facultyName='Changed faculty name'}, Faculty{id=3, facultyName='Faculty of Arts'}, Faculty{id=5, facultyName='Faculty name'}, Faculty{id=7, facultyName='Faculty name'}]
+Hibernate: select course0_.id as id1_2_, course0_.course_name as course_n2_2_ from courses course0_
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.539 [main] INFO  u.c.f.c.service.CourseService - getAll():
+ [Course{id=1, courseName='History'}, Course{id=2, courseName='Philosophy'}, Course{id=3, courseName='Another course's name'}, Course{id=4, courseName='Political science'}, Course{id=5, courseName='Culture'}, Course{id=6, courseName='Biology'}, Course{id=7, courseName='Chemistry'}, Course{id=8, courseName='Mathematics'}, Course{id=9, courseName='Physics'}, Course{id=10, courseName='Geometry'}, Course{id=13, courseName='Course's name'}]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /teachers/new
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = ua.com.foxminded.classtimetable.controllers.ui.TeacherController
+           Method = ua.com.foxminded.classtimetable.controllers.ui.TeacherController#create(TeacherDto, ModelMap)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = teachers/create
+             View = null
+        Attribute = teacher
+            value = TeacherDto{id=0, firstName='null', lastName='null', facultyId=0, coursesId=null}
+           errors = []
+        Attribute = faculties
+            value = [Faculty{id=1, facultyName='Changed faculty name'}, Faculty{id=2, facultyName='Changed faculty name'}, Faculty{id=3, facultyName='Faculty of Arts'}, Faculty{id=5, facultyName='Faculty name'}, Faculty{id=7, facultyName='Faculty name'}]
+        Attribute = allCourses
+            value = [Course{id=1, courseName='History'}, Course{id=2, courseName='Philosophy'}, Course{id=3, courseName='Another course's name'}, Course{id=4, courseName='Political science'}, Course{id=5, courseName='Culture'}, Course{id=6, courseName='Biology'}, Course{id=7, courseName='Chemistry'}, Course{id=8, courseName='Mathematics'}, Course{id=9, courseName='Physics'}, Course{id=10, courseName='Geometry'}, Course{id=13, courseName='Course's name'}]
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Teacher-creation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <a class="navbar-brand" href="/">Class Timetable</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">University structure</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/buildings">Buildings</a>
+                <a class="dropdown-item" href="/classrooms">Study rooms</a>
+                <a class="dropdown-item" href="/faculties">Faculties</a>
+                <a class="dropdown-item" href="/courses">Courses</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">Personalities</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/students">Students</a>
+                <a class="dropdown-item" href="/teachers">Teachers</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/lessons">Current lessons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/schedule">Show the personal schedule</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <br/>
+    <h2>New teacher creation page</h2>
+    <a class="btn btn-sm btn-secondary" href="/teachers">Back to table</a>
+    <br/>
+    <br/>
+    <form method="POST" action="/teachers">
+        <label>Enter first name:</label>
+        <input class="form-control form-control-sm" type="text" id="firstName" name="firstName" value=""/>
+
+        <label>Enter last name:</label>
+        <input class="form-control form-control-sm" type="text" id="lastName" name="lastName" value=""/>
+
+        <label>Select faculty:</label>
+        <select class="form-control form-control-sm" id="facultyId" name="facultyId">
+            <option value="1">Changed faculty name</option>
+            <option value="2">Changed faculty name</option>
+            <option value="3">Faculty of Arts</option>
+            <option value="5">Faculty name</option>
+            <option value="7">Faculty name</option>
+        </select>
+
+        <label>Select course:</label>
+        <input type="hidden" name="_coursesId" value="1"/><select class="form-control form-control-sm selectpicker" multiple data-dropup-auto="false" id="coursesId" name="coursesId">
+            <option value="1">History</option>
+            <option value="2">Philosophy</option>
+            <option value="3">Another course&#39;s name</option>
+            <option value="4">Political science</option>
+            <option value="5">Culture</option>
+            <option value="6">Biology</option>
+            <option value="7">Chemistry</option>
+            <option value="8">Mathematics</option>
+            <option value="9">Physics</option>
+            <option value="10">Geometry</option>
+            <option value="13">Course&#39;s name</option>
+        </select>
+        <br/>
+        <br/>
+        <input class="btn btn-sm btn-success" type="submit" value="Create!">
+    </form>
+</div>
+</body>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: select faculty0_.id as id1_3_, faculty0_.faculty_name as faculty_2_3_ from faculties faculty0_
+26 Feb;19:05:46.549 [main] INFO  u.c.f.c.service.FacultyService - getAll():
+ [Faculty{id=1, facultyName='Changed faculty name'}, Faculty{id=2, facultyName='Changed faculty name'}, Faculty{id=3, facultyName='Faculty of Arts'}, Faculty{id=5, facultyName='Faculty name'}, Faculty{id=7, facultyName='Faculty name'}]
+Hibernate: select course0_.id as id1_2_, course0_.course_name as course_n2_2_ from courses course0_
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+Hibernate: select courseteac0_.course_id as course_i2_8_0_, courseteac0_.teacher_id as teacher_1_8_0_, teacher1_.id as id1_7_1_, teacher1_.faculty_id as faculty_4_7_1_, teacher1_.first_name as first_na2_7_1_, teacher1_.last_name as last_nam3_7_1_, faculty2_.id as id1_3_2_, faculty2_.faculty_name as faculty_2_3_2_ from teachers_courses courseteac0_ inner join teachers teacher1_ on courseteac0_.teacher_id=teacher1_.id left outer join faculties faculty2_ on teacher1_.faculty_id=faculty2_.id where courseteac0_.course_id=?
+Hibernate: select teachercou0_.teacher_id as teacher_1_8_0_, teachercou0_.course_id as course_i2_8_0_, course1_.id as id1_2_1_, course1_.course_name as course_n2_2_1_ from teachers_courses teachercou0_ inner join courses course1_ on teachercou0_.course_id=course1_.id where teachercou0_.teacher_id=?
+26 Feb;19:05:46.552 [main] INFO  u.c.f.c.service.CourseService - getAll():
+ [Course{id=1, courseName='History'}, Course{id=2, courseName='Philosophy'}, Course{id=3, courseName='Another course's name'}, Course{id=4, courseName='Political science'}, Course{id=5, courseName='Culture'}, Course{id=6, courseName='Biology'}, Course{id=7, courseName='Chemistry'}, Course{id=8, courseName='Mathematics'}, Course{id=9, courseName='Physics'}, Course{id=10, courseName='Geometry'}, Course{id=13, courseName='Course's name'}]
+]]></system-out>
+  </testcase>
+</testsuite>

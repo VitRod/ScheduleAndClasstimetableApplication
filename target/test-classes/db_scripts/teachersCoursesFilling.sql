@@ -1,0 +1,13 @@
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (1, 1);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (2, 2);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (3, 3);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (4, 4);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (5, 5);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (6, 6);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (7, 6);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (8, 7);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (9, 7);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (10, 8);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (11, 9);
+INSERT INTO teachers_courses (teacher_id, course_id) VALUES (12, 10);
+COMMIT;

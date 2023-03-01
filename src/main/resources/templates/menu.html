@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>  
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>HELLO THERE!!!</h2>
+    <br/>
+    <h4>
+        This application caters to the needs of students, teachers, and staff at a fictional university model.<br/>
+        Its primary objective is to enable users to access their individual class schedules.<br/>
+        The current user, who is an application administrator,<br/>
+        can also gain insights into the university's organizational structure,<br/>
+        including its campus, course offerings, and notable personalities.<br/>
+    </h4>
+    <br/>
+    <h3>You can discover your schedule here.:</h3>
+    <a class="btn btn-lg btn-success" href="/schedule">Get schedule!</a>
+</div>
+</body>
+</html>

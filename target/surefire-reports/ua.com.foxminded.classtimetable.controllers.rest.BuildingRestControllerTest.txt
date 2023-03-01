@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ua.com.foxminded.classtimetable.controllers.rest.BuildingRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.289 s - in ua.com.foxminded.classtimetable.controllers.rest.BuildingRestControllerTest

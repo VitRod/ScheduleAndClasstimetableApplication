@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    ...
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" th:fragment="navbar">
+    <a class="navbar-brand" href="/">Class Timetable</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">University structure</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/buildings">Buildings</a>
+                <a class="dropdown-item" href="/classrooms">Study rooms</a>
+                <a class="dropdown-item" href="/faculties">Faculties</a>
+                <a class="dropdown-item" href="/courses">Courses</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/">Personalities</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="/students">Students</a>
+                <a class="dropdown-item" href="/teachers">Teachers</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/lessons">Current lessons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/schedule">Show the personal schedule</a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

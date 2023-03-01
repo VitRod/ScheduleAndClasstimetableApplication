@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Classroom-creation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div th:replace="~{fragments/navbar :: navbar}">Navbar
+</div>
+
+<div class="container">
+    <br/>
+    <h2>New classroom creation page</h2>
+    <p style="color:red">
+        <a th:text="${errorMessage}"></a>
+    </p>
+    <a class="btn btn-sm btn-secondary" href="/classrooms">Back to table</a>
+    <br/>
+    <br/>
+    <form th:method="POST" th:action="@{/classrooms}" th:object="${classroom}">
+        <label>Enter name:</label>
+        <input class="form-control form-control-sm" type="text" th:field="*{roomName}"/>
+
+        <label>Select classroom type:</label>
+        <select class="form-control form-control-sm" th:field="*{roomType}">
+            <option th:each="type:${classroomTypes}"
+                    th:value="${type}"
+                    th:text="${type}">
+            </option>
+        </select>
+
+        <label>Enter capacity:</label>
+        <input class="form-control form-control-sm" type="text" th:field="*{roomCapacity}"/>
+
+        <label>Select building:</label>
+        <select class="form-control form-control-sm" th:field="*{buildingId}">
+            <option th:each="building:${buildings}"
+                    th:value="${building.id}"
+                    th:text="${building.buildingName}">
+            </option>
+        </select>
+        <br/>
+        <input class="btn btn-sm btn-success" type="submit" value="Create!">
+    </form>
+</div>
+</body>
+</html>
