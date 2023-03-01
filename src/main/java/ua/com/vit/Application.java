@@ -17,7 +17,6 @@ public class Application {
         }
         logger.info("The application started");
     }
-
 }
 
 
