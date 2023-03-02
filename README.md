@@ -3,8 +3,12 @@
 
 https://user-images.githubusercontent.com/26525615/222364609-71b58169-1115-4935-8e76-6a6225fce044.mp4
 
+<br/>
+<br/>
+<br/>
 
 HELLO THERE !!!
+
 The main aim of this application is to provide access to individual class schedules for students, teachers, and staff at a fictional university. Additionally, the application administrator can gain insights into the university's organizational structure, such as its campus, course offerings, and notable personalities.
 
 Technologies:
