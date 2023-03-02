@@ -12,5 +12,5 @@ Technologies:
 Java, Spring Boot, Spring Data JPA, Hibernate, and PostgreSQL. 
 - The graphical user interface (GUI) is built with 
 Bootstrap and Thymeleaf, 
-- and logging is done using slf4j and logback. 
+- The Logging is done using slf4j and logback. 
 - The testing frameworks used are Mockito, JUnit, and H2Database.
